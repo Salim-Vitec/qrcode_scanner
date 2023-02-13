@@ -139,7 +139,7 @@ public class QrscanPlugin implements FlutterPlugin, ActivityAware, MethodCallHan
 
     private void generateQrCode(MethodCall call) {
         String code = call.argument("code");
-        Bitmap bitmap = CodeUtils.createImage(code, 400, 400, null);
+        Bitmap bitmap = CodeUtils.createImage(code, 600, 600, null);
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
         byte[] datas = baos.toByteArray();
